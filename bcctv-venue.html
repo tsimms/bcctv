@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+</script>
+<style type="text/css">
+.jw-text-duration { display:none; }
+.jw-text-elapsed { display:none; }
+</style>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<div id="bcctv-player"></div>
+
+<!-- BCCTV API SNIPPET BEGIN -->
+<script type="text/javascript" src="http://www.bcctv.org/api/latest/bcctv.js"></script>
+<script type="text/javascript">
+bcctv.player.init({ element:'bcctv-player', channel:4, host:'tv-columbia.bcctv.org' });
+bcctv.ui.init();
+if (navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) { $('<meta>', {name: 'viewport', content: 'minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=0' }); $('select').css('font-size','16px'); }
+setTimeout(function() { setTimeout('jwplayer("bcctv-player").setFullscreen();'); }, 1500);
+</script>
+<!-- BCCTV API SNIPPET END -->
+
+</body>
+</html>
